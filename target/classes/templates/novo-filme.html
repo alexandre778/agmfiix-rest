@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Filme</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Cadastro de Novo Filme</h2>
+    
+    <form th:action="@{/filmes/salvar}" th:object="${filme}" method="post">
+        <!-- ID oculto, útil para edição -->
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" th:field="*{titulo}" class="form-control" id="titulo" placeholder="Digite o título" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="sinopse" class="form-label">Sinopse</label>
+            <textarea th:field="*{sinopse}" class="form-control" id="sinopse" placeholder="Digite a sinopse" rows="4" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="diretor" class="form-label">Diretor</label>
+            <input type="text" th:field="*{diretor}" class="form-control" id="diretor" placeholder="Digite o diretor" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="ano" class="form-label">Ano</label>
+            <input type="number" th:field="*{ano}" class="form-control" id="ano" placeholder="Digite o ano" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar Filme</button>
+        <a th:href="@{/filmes}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGMFLIX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #f0f2f5; font-family: 'Roboto', sans-serif; }
+        .banner { background-image: url('https://source.unsplash.com/1600x400/?movies,cinema'); background-size: cover; background-position: center; color: #fff; padding: 100px 20px; text-align: center; position: relative; }
+        .banner::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+        .banner h1, .banner p { position: relative; z-index: 1; }
+        .banner h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; }
+        .banner p { font-size: 1.3rem; }
+        nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
+        nav a { padding: 12px 30px; font-size: 1.1rem; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        nav a:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0,0,0,0.25); }
+        .container-cards { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 50px; padding: 0 20px; }
+        .card-custom { width: 250px; border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-custom img { width: 100%; height: 150px; object-fit: cover; }
+        .card-custom:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.25); }
+    </style>
+</head>
+<body>
+
+<div class="banner mb-5">
+    <h1>Bem-vindo ao AGMFIIX 🎬</h1>
+    <p>Gerencie filmes e análises de forma moderna</p>
+</div>
+
+<nav>
+    <a class="btn btn-primary" href="/filmes">Gerenciar Filmes</a>
+    <a class="btn btn-success" href="/analises">Gerenciar Análises</a>
+</nav>
+
+<div class="container-cards">
+    <div class="card card-custom">
+        <img src="https://source.unsplash.com/250x150/?movie" alt="Filmes">
+        <div class="card-body text-center">
+            <h5 class="card-title">Filmes</h5>
+            <p class="card-text">Confira os filmes cadastrados.</p>
+        </div>
+    </div>
+    <div class="card card-custom">
+        <img src="https://source.unsplash.com/250x150/?analysis" alt="Análises">
+        <div class="card-body text-center">
+            <h5 class="card-title">Análises</h5>
+            <p class="card-text">Veja todas as análises feitas.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

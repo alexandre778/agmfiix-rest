@@ -1,0 +1,9 @@
+com\agmfiix\repository\FilmeRepository.class
+com\agmfiix\controller\AnaliseController.class
+com\agmfiix\model\Analise.class
+com\agmfiix\service\AnaliseService.class
+com\agmfiix\model\Filme.class
+com\agmfiix\controller\HomeController.class
+com\agmfiix\controller\RestApiController.class
+com\agmfiix\AgmfiixRestApplication.class
+com\agmfiix\repository\AnaliseRepository.class
